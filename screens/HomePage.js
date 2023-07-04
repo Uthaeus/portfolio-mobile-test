@@ -1,11 +1,14 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
+// import { useNavigation } from "@react-navigation/native";
 
-function HomePage() {
+function HomePage({ navigation }) {
+    // const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Home Page</Text>
 
-            <Pressable style={styles.aboutButton}>
+            <Pressable style={styles.aboutButton} onPress={() => navigation.navigate('AboutPage')}>
                 <Text>Go to About Page</Text>
             </Pressable>
         </View>
@@ -14,10 +17,11 @@ function HomePage() {
 
 export default HomePage;
 
+// navigation.navigate('AboutPage', { categoryId: itemData.item.id }) <<<<<<< example passing data to the next screen
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: 'center',
     },
