@@ -1,11 +1,19 @@
-
-import { View, Text, StyleSheet } from "react-native"
+import { useLayoutEffect } from "react";
+import { View, Text, StyleSheet, Button } from "react-native"
 // import { useRoute } from "@react-navigation/native"; << using hook instead of props
 
 function AboutPage({ route, navigation }) {
     // const route = useRoute(); << using hook instead of props
 
     // const catId = route.params.categoryId; <<<< example getting data from the previous screen - HomePage.js << only usable with screen components when using stack navigator
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerRight: () => {
+                return <Button title="boop" onPress={() => console.log("Saved")} />
+            }
+        });
+    }, []); 
 
     return (
         <View style={styles.container}>
