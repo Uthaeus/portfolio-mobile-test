@@ -7,13 +7,13 @@ function AboutPage({ route, navigation }) {
 
     // const catId = route.params.categoryId; <<<< example getting data from the previous screen - HomePage.js << only usable with screen components when using stack navigator
 
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            headerRight: () => {
-                return <Button title="boop" onPress={() => console.log("Saved")} />
-            }
-        });
-    }, []); 
+    // useLayoutEffect(() => {
+    //     navigation.setOptions({
+    //         headerRight: () => {
+    //             return <Button title="boop" onPress={() => console.log("Saved")} />
+    //         }
+    //     });
+    // }, []); 
 
     return (
         <View style={styles.container}>

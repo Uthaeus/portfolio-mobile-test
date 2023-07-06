@@ -25,12 +25,10 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Drawer.Navigator>
-          <Drawer.Screen name="Home" component={HomePage} />
-          <Drawer.Screen name="About" component={AboutPage} />
-
-          
-        </Drawer.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomePage} />
+        <Stack.Screen name="About" component={AboutPage} />
+      </Stack.Navigator>
       </NavigationContainer>
     </>
   );

@@ -6,12 +6,12 @@ import BlogItem from "../components/Blogs/BlogItem";
 function BlogsIndex() {
     const [blogs, setBlogs] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:4000/blogs')
-            .then(response => response.json())
-            .then(data => setBlogs(data))
-            .catch(error => console.log('blogs index error:', error));
-    }, []);
+    // useEffect(() => {
+    //     fetch('http://localhost:4000/blogs')
+    //         .then(response => response.json())
+    //         .then(data => setBlogs(data))
+    //         .catch(error => console.log('blogs index error:', error));
+    // }, []);
 
     return (
         <View style={styles.container}>
